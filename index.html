@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Light Scheduler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="glass-card p-8 rounded-2xl w-full max-w-md text-white">
+        <h1 class="text-3xl font-bold mb-6 text-center">💡 Light Scheduler</h1>
+        <form id="schedule-form" class="space-y-5">
+            <div>
+                <label for="on-time" class="block text-sm font-semibold text-white">⏰ ON Time</label>
+                <input type="time" id="on-time" name="on-time" class="w-full mt-1" required />
+            </div>
+            <div>
+                <label for="off-time" class="block text-sm font-semibold text-white">🌙 OFF Time</label>
+                <input type="time" id="off-time" name="off-time" class="w-full mt-1" required />
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition">Schedule Light</button>
+        </form>
+        <p id="status" class="mt-6 text-center">🔌 Not connected</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
